@@ -1,0 +1,140 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Roboto;
+  font-size: 12px;
+  color: #424242;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+header,
+nav,
+footer,
+section,
+article,
+div {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+main { z-index: 1; }
+
+header {
+  width: 100%;
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  min-height: 56px;
+  transition: min-height 0.3s;
+}
+header a #logoImage {
+  width: 48px;
+  height: 48px;
+}
+header #menu {
+  margin-left: auto;
+  margin-right:10px;
+}
+
+.nav {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+}
+.nav-sm, .nav-lg { display: none; }
+.nav-sm { box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26); }
+.nav-sm.open {
+  display: block;
+}
+
+.nav__list, .nav__item {
+  width: 100%;
+}
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav__item {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.nav__item a {
+  text-decoration: none;
+  text-align: center;
+  padding: 15px 0 15px;
+  font-size: 1.2em;
+  color: #565656;
+}
+.nav__item:hover { background-color: #add8e6; }
+
+footer ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+footer a { padding: 0; }
+footer span { display: none; }
+
+@media screen and (min-width: 425px)
+{
+  h1.header__title { font-size: 2em; }
+
+  footer ul { justify-content: left; }
+  footer span { display: block; }
+  footer .placeholder { display: none; }
+
+  .nav { position: relative; }
+
+  #menu { display: none; }
+  .nav-sm { display: none !important; }
+
+  .nav-lg {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .nav__list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+  .nav__item:hover { background-color: #ffffff; }
+  .nav__item > a { font-size: 1.3em; }
+  .nav__item > a:hover {
+    color: #68c7c1;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+  }
+
+  body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
