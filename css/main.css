@@ -6,6 +6,9 @@ html {
   height: 100%;
 }
 
+a { text-decoration: none; }
+a:focus { outline: 0px; }
+
 body {
   font-family: Roboto;
   font-size: 12px;
@@ -49,13 +52,15 @@ header {
   min-height: 56px;
   transition: min-height 0.3s;
 }
-header a #logoImage {
-  width: 48px;
+header a .logo {
   height: 48px;
+  margin-left: 10px;
 }
 header #menu {
   margin-left: auto;
   margin-right:10px;
+  color: #818181;
+  font-size: 2em;
 }
 
 .nav {
@@ -94,6 +99,35 @@ header #menu {
 }
 .nav__item:hover { background-color: #add8e6; }
 
+.jumbo-header {
+  width: 100%;
+  height: 240px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("../images/header_sm.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.jumbo-header picture {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.jumbo-header .logo { height: 100px; }
+.jumbo-header h1 {
+  color: #eceeef;
+  margin: 0 10px 0 10px;
+  font-size: 3em;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  text-shadow: 5px 5px 5px black;
+}
+
 footer ul {
   width: 100%;
   display: flex;
@@ -105,6 +139,11 @@ footer span { display: none; }
 
 @media screen and (min-width: 425px)
 {
+  body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   h1.header__title { font-size: 2em; }
 
   footer ul { justify-content: left; }
@@ -133,8 +172,30 @@ footer span { display: none; }
     letter-spacing: 1.2px;
   }
 
-  body {
-    margin-left: auto;
-    margin-right: auto;
+  .jumbo-header {
+    background-image: url("../images/header_md.jpg");
+  }
+  .jumbo-header h1 {
+    font-size: 4em;
+  }
+}
+@media screen and (min-width: 1024px)
+{
+  .jumbo-header {
+    background-image: url("../images/header_lg.jpg");
+    background-position: center;
+  }
+  .jumbo-header h1 {
+    font-size: 5em;
+  }
+}
+@media screen and (min-width: 2048px)
+{
+  .jumbo-header {
+    background-image: url("../images/header_xl.jpg");
+  }
+
+  .jumbo-header h1 {
+    font-size: 6em;
   }
 }
