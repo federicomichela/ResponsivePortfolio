@@ -57,7 +57,7 @@ header {
   transition: min-height 0.3s;
 }
 header a .logo {
-  height: 48px;
+  height: 25px;
   margin-left: 10px;
 }
 header #menu {
