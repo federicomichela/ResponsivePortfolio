@@ -42,6 +42,14 @@ ul {
 main {
   z-index: 1;
   margin-top: -1px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.jumbo-header__dynamic, .jumbo-header__static {
+  position: absolute;
+  width: 100%;
+  /* height: 100%; */
 }
 
 header {
@@ -109,25 +117,27 @@ header #menu {
 
 .jumbo-header {
   width: 100%;
+  height: 100%;
 
+  background: rgb(104,199,193);
+  background: linear-gradient(180deg, rgba(104,199,193,1) 0%, rgba(160,220,216,1) 35%, rgba(236,238,239,1) 100%);
+}
+.jumbo-header__static {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   padding-bottom: 150px;
-
-  background: rgb(104,199,193);
-  background: linear-gradient(180deg, rgba(104,199,193,1) 0%, rgba(160,220,216,1) 35%, rgba(236,238,239,1) 100%);
 }
-.jumbo-header picture {
+.jumbo-header__static picture {
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   margin: 50px 0 50px;
 }
-.jumbo-header .header-logo { height: 50px; }
-.jumbo-header h1 {
+.jumbo-header__static .header-logo { height: 50px; }
+.jumbo-header__static h1 {
   color: #eceeef;
   margin: 0px 10px 30px 10px;
   font-size: 2.5em;

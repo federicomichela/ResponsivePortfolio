@@ -19,7 +19,14 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Audiowide|Montserrat&display=swap" rel="stylesheet">
 
+  <script type="text/javascript" src='js/libs/three.min.js'></script>
+
+  <script type="text/javascript" src="js/sceneSubjects/GeneralLights.js"></script>
+  <script type="text/javascript" src="js/sceneSubjects/SceneSubject.js"></script>
+
+  <script type="text/javascript" src="js/SceneManager.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/utils.js"></script>
 </head>
 
 <body>
@@ -50,10 +57,13 @@
 
   <main>
     <section class="jumbo-header">
-      <picture>
-        <img src="images/glasses.svg" title="Glasses" class="header-logo">
-      </picture>
-      <h1>Front End Developer</h1>
+      <canvas class="jumbo-header__dynamic" id="canvas"></canvas>
+      <div class="jumbo-header__static">
+        <picture>
+          <img src="images/glasses.svg" title="Glasses" class="header-logo">
+        </picture>
+        <h1>Front End Developer</h1>
+      </div>
     </section>
   </main>
 
