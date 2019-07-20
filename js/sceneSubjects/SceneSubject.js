@@ -24,16 +24,16 @@ function SceneSubject(scene) {
   var group = new THREE.Group();
   var particles = 500;
   var i, mesh;
-  var incrementalFactor = 0.01;
+  var incrementalFactor = 0.1;
 
 	for ( i = 0; i < particles; i ++ )
   {
 		mesh = new THREE.Mesh( geometry, material );
 
     mesh.name = "mesh_"+i;
-		mesh.position.x = Math.random() * 200 - 100;
-		mesh.position.y = Math.random() * 200 - 100;
-		mesh.position.z = Math.random() * 200 - 100;
+		mesh.position.x = Math.random() * 200 - 100;//getRandomNumber(0, boundaries.x);
+		mesh.position.y = Math.random() * 200 - 100;//getRandomNumber(0, boundaries.y);
+		mesh.position.z = Math.random() * 200 - 100;//getRandomNumber(0, boundaries.z);
 		mesh.matrixAutoUpdate = true;
 		mesh.updateMatrix();
 		group.add( mesh );
@@ -45,9 +45,22 @@ function SceneSubject(scene) {
     {
       mesh = group.getObjectByName("mesh_"+i);
 
-      mesh.position.x += incrementalFactor;
+      // mesh.position.x += incrementalFactor;
   		mesh.position.y += incrementalFactor
-  		mesh.position.z += incrementalFactor;
+  		// mesh.position.z += incrementalFactor;
+
+      // if (mesh.position.x > window.innerWidth/2)
+      // {
+      //   mesh.position.x =  Math.random() * 100 - 200;
+      // }
+      if (mesh.position.y > window.innerHeight/3)
+      {
+        mesh.position.y = Math.random() * 200 - 100;
+      }
+      // if (mesh.position.z > boundaries.z)
+      // {
+      //   mesh.position.z = Math.random() * 200 - 100;
+      // }
     }
   };
 }

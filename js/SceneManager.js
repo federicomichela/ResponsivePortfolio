@@ -1,8 +1,8 @@
 function SceneManager(canvas) {
     var clock = new THREE.Clock();
     var screenDimensions = {
-        width: canvas.width,
-        height: canvas.height
+      width: canvas.width,
+      height: canvas.height
     };
     var scene = buildScene();
     var renderer = buildRender(screenDimensions);
@@ -36,20 +36,20 @@ function SceneManager(canvas) {
         return renderer;
     }
 
-    function buildCamera({ width, height }) {
-        var aspectRatio = width / height;
+    function buildCamera(boundaries) {
+        var aspectRatio = boundaries.x / boundaries.y;
         var fieldOfView = 60;
         var nearPlane = 1;
-        var farPlane = 100;
+        var farPlane = boundaries.z;
         var camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
 
         return camera;
     }
 
-    function createSceneSubjects(scene) {
+    function createSceneSubjects(scene, boundaries) {
         var sceneSubjects = [
             new GeneralLights(scene),
-            new SceneSubject(scene)
+            new SceneSubject(scene, boundaries)
         ];
 
         return sceneSubjects;

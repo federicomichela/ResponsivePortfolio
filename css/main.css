@@ -90,6 +90,7 @@ header #menu {
   flex-wrap: wrap;
   align-items: center;
   height: calc(100% - 56px);
+  margin-top: -2px;
 }
 
 .nav__list, .nav__item {
