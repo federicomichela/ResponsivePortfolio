@@ -137,14 +137,22 @@ header #menu {
   justify-content: center;
   margin: 50px 0 50px;
 }
-.jumbo-header__static .header-logo { height: 50px; }
+.jumbo-header__static .header-logo {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  background-image: url("../images/profilePhoto_transparency.png");
+  background-position: center;
+  background-size: cover;
+  margin: 50px 0 50px;
+}
 .jumbo-header__static h1 {
-  color: #eceeef;
-  margin: 0px 10px 30px 10px;
-  font-size: 2.5em;
-  font-family: 'Audiowide', sans-serif;
+  color: #1f3b39;
+  margin: 0px 10px 10px 10px;
+  font-family: 'Montserrat Alternates', sans-serif;
   text-align: center;
 }
+h1 { font-size: 2.5em; }
 
 footer ul {
   width: 100%;
