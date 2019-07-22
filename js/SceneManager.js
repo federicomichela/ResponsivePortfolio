@@ -12,7 +12,7 @@ function SceneManager(canvas) {
     function buildScene() {
         var scene = new THREE.Scene();
 
-        // scene.background = new THREE.Color("#000");
+        scene.fog = new THREE.FogExp2( 0x000000, 0.001 );
 
         return scene;
     }
