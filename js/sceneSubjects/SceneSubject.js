@@ -2,7 +2,7 @@ function SceneSubject(scene) {
 	var geometry = new THREE.BufferGeometry();
 	var vertices = [];
 	var sprite = new THREE.TextureLoader().load( 'images/textures/circle.png' );
-	var numberOfParticles = 500;
+	var numberOfParticles = 50;
 	var i, x, y, z;
 	var particles;
 
@@ -16,7 +16,7 @@ function SceneSubject(scene) {
 	}
 	geometry.addAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ) );
 	material = new THREE.PointsMaterial( {
-		size: 50,
+		size: 500,
 		sizeAttenuation: false,
 		map: sprite,
 		alphaTest: 0.5,
@@ -34,6 +34,13 @@ function SceneSubject(scene) {
 		for ( i=1; i<numberOfParticles*3; i+=3 )
 		{
 			positions[i] += 0.1 + Math.random();
+
+			if (positions[i] >= 100)
+			{
+				positions[i-1] = 2000 * Math.random() - 1000;
+				positions[i] = 2000 * Math.random() - 1000;
+				positions[i+1] = 2000 * Math.random() - 1000;
+			}
 		}
 
 		particles.geometry.attributes.position.needsUpdate = true;

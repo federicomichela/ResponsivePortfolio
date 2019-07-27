@@ -12,7 +12,7 @@ function SceneManager(canvas) {
     function buildScene() {
         var scene = new THREE.Scene();
 
-        scene.fog = new THREE.FogExp2( 0x000000, 0.001 );
+        scene.fog = new THREE.FogExp2( 0x000000, 0.0001 );
 
         return scene;
     }
@@ -43,7 +43,7 @@ function SceneManager(canvas) {
         var farPlane = boundaries.z;
         var camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
 
-        camera.position.set( 100, 100, 100 );
+        camera.position.set( 10, 10, 10 );
         camera.lookAt(new THREE.Vector3( 0, 0, 0 ));
 
         return camera;
