@@ -47,11 +47,6 @@ main {
   width: 100%;
   height: 100%;
 }
-.jumbo-header__dynamic, .jumbo-header__static {
-  position: absolute;
-  width: 100%;
-  /* height: 100%; */
-}
 
 header {
   width: 100%;
@@ -145,12 +140,19 @@ header #menu {
   background: rgb(104,199,193);
   background: linear-gradient(180deg, rgba(104,199,193,1) 0%, rgba(160,220,216,1) 35%, rgba(236,238,239,1) 100%);
 }
+.jumbo-header__dynamic, .jumbo-header__static {
+  position: absolute;
+  width: 100%;
+}
 .jumbo-header__static {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding-bottom: 150px;
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: #1f3b39;
+  margin-top: -28px;
 }
 .jumbo-header__static .header-logo {
   height: 200px;
@@ -159,15 +161,17 @@ header #menu {
   background-image: url("../images/profilePhoto_transparency.png");
   background-position: center;
   background-size: cover;
-  margin: 50px 0 50px;
+  margin-bottom: 30px;
 }
-.jumbo-header__static h1 {
-  color: #1f3b39;
-  margin: 0px 10px 10px 10px;
-  font-family: 'Montserrat Alternates', sans-serif;
-  text-align: center;
-  font-size: 2.5em;
+.jumbo-header__static h1,
+.jumbo-header__static h2,
+.jumbo-header__static h3 {
+  width: 100%;
 }
+.jumbo-header__static h1 { font-size: 2.5em; }
+.jumbo-header__static h2 { font-size: 1.8em; }
+.jumbo-header__static h3 { font-size: 1.2em; margin: 10px 0 60px; }
+
 
 #myWorks {
   display: flex;
@@ -285,7 +289,7 @@ footer span { display: none; }
     font-size: 1.3em;
   }
   .nav__item > a:hover {
-    color: #68c7c1;
+    color: #027d89;
     font-weight: bold;
     letter-spacing: 1.2px;
   }
