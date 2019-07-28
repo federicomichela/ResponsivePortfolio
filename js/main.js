@@ -1,6 +1,7 @@
 window.addEventListener('load', function() {
   var menu = document.querySelector("#menu");
   var nav = document.querySelector(".nav-sm");
+  var navItemLinks = document.getElementsByClassName("nav__item-link");
 
   function openMenu(e)
   {
@@ -13,6 +14,10 @@ window.addEventListener('load', function() {
   };
 
   menu.addEventListener("click", openMenu);
+
+  Array.from(navItemLinks).forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  })
 
   /******************************************************************************/
 

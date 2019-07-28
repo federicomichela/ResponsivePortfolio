@@ -15,7 +15,7 @@
 
   <link rel="stylesheet" href="css/main.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Audiowide|Montserrat|Montserrat+Alternates|Abril+Fatface|Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Audiowide|Montserrat|Montserrat+Alternates|Abril+Fatface|Raleway:300,400,500,600,700,800&display=swap" rel="stylesheet">
 
   <script type="text/javascript" src='js/libs/three.min.js'></script>
 
@@ -37,18 +37,18 @@
     </a>
     <nav class="nav nav-lg">
       <ul class="nav__list">
-        <li class="nav__item"><a href="#">ABOUT</a></li>
-        <li class="nav__item"><a href="#">SKILLS</a></li>
-        <li class="nav__item"><a href="#">WORKS</a></li>
+        <li class="nav__item"><a href="#" target="_self">ABOUT</a></li>
+        <li class="nav__item"><a href="#" target="_self">SKILLS</a></li>
+        <li class="nav__item"><a href="#myWorks" target="_self">WORKS</a></li>
       </ul>
     </nav>
   </header>
 
   <nav class="nav nav-sm" id="smallMenu">
     <ul class="nav__list">
-      <li class="nav__item"><a href="#">ABOUT</a></li>
-      <li class="nav__item"><a href="#">SKILLS</a></li>
-      <li class="nav__item"><a href="#">WORKS</a></li>
+      <li class="nav__item"><a class="nav__item-link" href="#" target="_self">ABOUT</a></li>
+      <li class="nav__item"><a class="nav__item-link" href="#" target="_self">SKILLS</a></li>
+      <li class="nav__item"><a class="nav__item-link" href="#myWorks" target="_self">WORKS</a></li>
     </ul>
   </nav>
 
@@ -56,66 +56,89 @@
     <section class="jumbo-header">
       <canvas class="jumbo-header__dynamic" id="canvas"></canvas>
       <div class="jumbo-header__static">
-        <div class="header-logo">&nbsp;</div>
+        <div class="header-logo"></div>
         <h1>Hi, I'm Miki a passionate front end developer from Reading, UK</h1>
       </div>
     </section>
 
-    <section class="section">
-      <figure class="works">
-        <picture>
-          <img src="images/RealisticGames_FunkySpin.jpg" alt="Realistic Games - Funky Spin" />
-        </picture>
-        <span class="more">&raquo; Learn More</span>
-        <figcaption class="desc">
-            <h3>Realistic Games - Funky Spin</h3>
-            First progressives webgl three reels cabinet slot - featuring THREE.js, vanilla javascript, html5, css3
-        </figcaption>
-      </figure>
+    <section class="section" id="myWorks">
+      <div class="container">
+        <h1>My Works</h1>
+        <h2>Here some of my most outstanding works</h2>
+        <div class="project-grid">
+          <figure class="works">
+            <picture>
+              <source media="(min-width: 768px)" srcset="images/RealisticGames_FunkySpin_lg-1024_2x.jpg 2x, images/RealisticGames_FunkySpin_lg-700_1x.jpg" />
+              <img src="images/RealisticGames_FunkySpin_sm.jpg" alt="Realistic Games - Funky Spin" />
+            </picture>
+            <span class="more">&raquo; Learn More</span>
+            <figcaption class="desc">
+                <h3>Realistic Games - Funky Spin</h3>
+                First progressives webgl three reels cabinet slot - featuring THREE.js, vanilla javascript, html5, css3
+            </figcaption>
+          </figure>
 
-      <figure class="works">
-        <picture>
-          <img src="images/RealisticGames_Splashtastic.jpg" alt="Realistic Games - Splashtastic" />
-        </picture>
-        <span class="more">&raquo; Learn More</span>
-        <figcaption class="desc">
-            <h3>Realistic Games - Splashtastic</h3>
-            Sea-themed three reels slot using 3D particles emitter - featuring THREE.js, vanilla javascript, html5, css3
-        </figcaption>
-      </figure>
+          <figure class="works">
+            <picture>
+              <source media="(min-width: 768px)" srcset="images/RealisticGames_Splashtastic_lg-1024_2x.jpg 2x, images/RealisticGames_Splashtastic_lg-700_1x.jpg" />
+              <img src="images/RealisticGames_Splashtastic_sm.jpg" alt="Realistic Games - Splashtastic" />
+            </picture>
+            <span class="more">&raquo; Learn More</span>
+            <figcaption class="desc">
+                <h3>Realistic Games - Splashtastic</h3>
+                Sea-themed three reels slot using 3D particles emitter - featuring THREE.js, vanilla javascript, html5, css3
+            </figcaption>
+          </figure>
 
-      <figure class="works">
-        <picture>
-          <img src="images/RealisticGames_CWM.jpg" alt="Realistic Games - Clockwork Mice" />
-        </picture>
-        <span class="more">&raquo; Learn More</span>
-        <figcaption class="desc">
-            <h3>Realistic Games - Clockwork Mice</h3>
-            Futuristic five reels slot using - featuring Pixi.js, vanilla javascript, html5, css3
-        </figcaption>
-      </figure>
+          <figure class="works">
+            <picture>
+              <source media="(min-width: 768px)" srcset="images/RealisticGames_CWM_lg-1024_2x.jpg 2x, images/RealisticGames_CWM_lg-700_1x.jpg" />
+              <img src="images/RealisticGames_CWM_sm.jpg" alt="Realistic Games - Clockwork Mice" />
+            </picture>
+            <span class="more">&raquo; Learn More</span>
+            <figcaption class="desc">
+                <h3>Realistic Games - Clockwork Mice</h3>
+                Futuristic five reels slot using - featuring Pixi.js, vanilla javascript, html5, css3
+            </figcaption>
+          </figure>
 
-      <figure class="works">
-        <picture>
-          <img src="images/AppogeeHR_checklists.png" alt="Appogee HR - Checklist" />
-        </picture>
-        <span class="more">&raquo; Learn More</span>
-        <figcaption class="desc">
-            <h3>Appogee HR - Checklist</h3>
-            Create, customize and assign checklists to users - featuring jQuery, handlebars.js, html5, bootstrap, css, python
-        </figcaption>
-      </figure>
+          <figure class="works">
+            <picture>
+              <source media="(min-width: 768px)" srcset="images/AppogeeHR_checklists_lg-1024_2x.png 2x, images/AppogeeHR_checklists_lg-700_1x.png" />
+              <img src="images/AppogeeHR_checklists_sm.png" alt="Appogee HR - Checklist" />
+            </picture>
+            <span class="more">&raquo; Learn More</span>
+            <figcaption class="desc">
+                <h3>Appogee HR - Checklist</h3>
+                Create, customize and assign checklists to users - featuring jQuery, handlebars.js, html5, bootstrap, css, python
+            </figcaption>
+          </figure>
 
-      <figure class="works">
-        <picture>
-          <img src="images/AppogeeHR_reports.png" alt="Appogee HR - Reporting Tool" />
-        </picture>
-        <span class="more">&raquo; Learn More</span>
-        <figcaption class="desc">
-            <h3>Appogee HR - Reporting Tool</h3>
-            Reports creation, customization, download, scheduling and real-time execution - featuring jQuery, handlebars.js, html5, bootstrap, css, python
-        </figcaption>
-      </figure>
+          <figure class="works">
+            <picture>
+              <source media="(min-width: 768px)" srcset="images/AppogeeHR_reports_lg-1024_2x.png 2x, images/AppogeeHR_reports_lg-700_1x.png" />
+              <img src="images/AppogeeHR_reports_sm.png" alt="Appogee HR - Reporting Tool" />
+            </picture>
+            <span class="more">&raquo; Learn More</span>
+            <figcaption class="desc">
+                <h3>Appogee HR - Reporting Tool</h3>
+                Reports creation, customization, download, scheduling and real-time execution - featuring jQuery, handlebars.js, html5, bootstrap, css, python
+            </figcaption>
+          </figure>
+
+          <figure class="works">
+            <picture>
+              <source media="(min-width: 768px)" srcset="images/AppogeeHR_recordsUploader_lg-1024_2x.png 2x, images/AppogeeHR_recordsUploader_lg-700_1x.png" />
+              <img src="images/AppogeeHR_recordsUploader_sm.png" alt="Appogee HR - Records Uploader" />
+            </picture>
+            <span class="more">&raquo; Learn More</span>
+            <figcaption class="desc">
+                <h3>Appogee HR - Records Uploader</h3>
+                Upload and preview files into employee's personal directory or across the whole company and customize accessibility - featuring jQuery, handlebars.js, html5, bootstrap, css, python
+            </figcaption>
+          </figure>
+        </div>
+      </div>
     </section>
   </main>
 

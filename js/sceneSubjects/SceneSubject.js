@@ -16,7 +16,7 @@ function SceneSubject(scene) {
 	}
 	geometry.addAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ) );
 	material = new THREE.PointsMaterial( {
-		size: 500,
+		size: 50,
 		sizeAttenuation: false,
 		map: sprite,
 		alphaTest: 0.5,
