@@ -356,7 +356,7 @@ footer span { display: none; }
     margin: 10px;
   }
 
-  .columns { width: 700px; }
+  .columns { max-width: 1200px; }
   .column:nth-child(1) {
     border-top-right-radius: 0;
     border-top-left-radius: 40px;
@@ -368,14 +368,12 @@ footer span { display: none; }
     border-bottom-left-radius: 0;
   }
   .column { width: 33.3%; }
-}
-/*
-@media screen and (min-width: 1024px)
-{
-  .jumbo-header h1 {
-    text-align: center;
+  .content {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
   }
-} */
+}
 
 
 @-webkit-keyframes slide-down {
